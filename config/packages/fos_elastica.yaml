@@ -1,0 +1,8 @@
+imports:
+    - { resource: "@SyliusVueStorefrontPlugin/Resources/config/indexes/attribute.yaml" }
+    - { resource: "@SyliusVueStorefrontPlugin/Resources/config/indexes/category.yaml" }
+    - { resource: "@SyliusVueStorefrontPlugin/Resources/config/indexes/product.yaml" }
+
+fos_elastica:
+    clients:
+        default: { host: '%env(ELASTICSEARCH_HOST)%', port: '%env(ELASTICSEARCH_PORT)%' }
