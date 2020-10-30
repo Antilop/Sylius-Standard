@@ -37,6 +37,9 @@
     "behat/transliterator": {
         "version": "v1.2.0"
     },
+    "bitbag/vuestorefront-plugin": {
+        "version": "dev-fix-symfony-property-info"
+    },
     "clue/stream-filter": {
         "version": "v1.4.0"
     },
@@ -136,8 +139,20 @@
     "egulias/email-validator": {
         "version": "2.1.5"
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v6.7.2"
+    },
     "fig/link-util": {
         "version": "1.1.1"
+    },
+    "friends-of-behat/mink": {
+        "version": "v1.8.0"
+    },
+    "friends-of-behat/mink-browserkit-driver": {
+        "version": "v1.4.0"
+    },
+    "friends-of-behat/mink-extension": {
+        "version": "v2.4.0"
     },
     "friends-of-behat/page-object-extension": {
         "version": "0.1"
@@ -160,6 +175,18 @@
             "ref": "81dee417d2cc60cd1c9d6208dff2ec22a1103e93"
         }
     },
+    "friendsofsymfony/elastica-bundle": {
+        "version": "5.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "5.0",
+            "ref": "46c9cd2c1e07f0fcfd97e96f12b03b2e0845c4cd"
+        },
+        "files": [
+            "config/packages/fos_elastica.yaml"
+        ]
+    },
     "friendsofsymfony/oauth-server-bundle": {
         "version": "1.6.1"
     },
@@ -181,6 +208,9 @@
     "gedmo/doctrine-extensions": {
         "version": "v2.4.36"
     },
+    "gesdinet/jwt-refresh-token-bundle": {
+        "version": "v0.8.3"
+    },
     "guzzlehttp/guzzle": {
         "version": "6.3.3"
     },
@@ -189,6 +219,12 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.4.2"
+    },
+    "guzzlehttp/ringphp": {
+        "version": "1.1.1"
+    },
+    "guzzlehttp/streams": {
+        "version": "3.0.0"
     },
     "hamcrest/hamcrest-php": {
         "version": "v2.0.0"
@@ -327,6 +363,18 @@
             "version": "3.2",
             "ref": "5ef2976310e8f9621c1a722a73bfbe115c1559a3"
         }
+    },
+    "nelmio/cors-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "6388de23860284db9acce0a7a5d9d13153bcb571"
+        },
+        "files": [
+            "config/packages/nelmio_cors.yaml"
+        ]
     },
     "nette/finder": {
         "version": "v2.4.2"
@@ -496,6 +544,12 @@
     "ramsey/uuid": {
         "version": "3.8.0"
     },
+    "react/promise": {
+        "version": "v2.8.0"
+    },
+    "ruflin/elastica": {
+        "version": "6.1.1"
+    },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"
     },
@@ -643,6 +697,9 @@
     "symfony/dependency-injection": {
         "version": "v4.1.3"
     },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
+    },
     "symfony/doctrine-bridge": {
         "version": "v4.1.3"
     },
@@ -651,6 +708,9 @@
     },
     "symfony/dotenv": {
         "version": "v4.1.3"
+    },
+    "symfony/error-handler": {
+        "version": "v4.4.13"
     },
     "symfony/event-dispatcher": {
         "version": "v4.1.3"
@@ -736,11 +796,17 @@
     "symfony/polyfill-iconv": {
         "version": "v1.9.0"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.18.1"
+    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.9.0"
     },
     "symfony/polyfill-intl-idn": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "v1.18.1"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.9.0"
@@ -756,6 +822,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.18.1"
     },
     "symfony/polyfill-util": {
         "version": "v1.17.1"
@@ -780,6 +849,9 @@
             "version": "4.0",
             "ref": "cda8b550123383d25827705d05a42acf6819fe4e"
         }
+    },
+    "symfony/security": {
+        "version": "v4.4.13"
     },
     "symfony/security-bundle": {
         "version": "3.3",
@@ -810,6 +882,9 @@
     },
     "symfony/stopwatch": {
         "version": "v4.1.3"
+    },
+    "symfony/string": {
+        "version": "v5.1.5"
     },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",

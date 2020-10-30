@@ -6,6 +6,7 @@ parameters:
     sylius.security.new_api_regex: "^%sylius.security.new_api_route%"
     sylius.security.new_api_admin_route: "%sylius.security.new_api_route%/admin"
     sylius.security.new_api_admin_regex: "^%sylius.security.new_api_admin_route%"
+    bitbag.vue_storefront.security.regex: "^/vsbridge"
 
 security:
     always_authenticate_before_granting: true
@@ -24,6 +25,29 @@ security:
     encoders:
         Sylius\Component\User\Model\UserInterface: argon2i
     firewalls:
+        vs_bridge_user_login:
+            pattern: "%bitbag.vue_storefront.security.regex%/user/login"
+            stateless: true
+            anonymous: true
+            provider: sylius_shop_user_provider
+            json_login:
+                provider: sylius_shop_user_provider
+                check_path: /vsbridge/user/login
+                password_path: password
+                success_handler: bitbag_sylius_vue_storefront_plugin.lexik_jwt_authentication.handler.authentication_success
+                failure_handler: bitbag_sylius_vue_storefront_plugin.lexik_jwt_authentication.handler.authentication_failure
+                require_previous_session: false
+
+        vs_bridge:
+            pattern: "%bitbag.vue_storefront.security.regex%"
+            stateless: true
+            anonymous: true
+            provider: sylius_shop_user_provider
+            guard:
+                provider: sylius_shop_user_provider
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+
         admin:
             switch_user: true
             context: admin
@@ -153,3 +177,4 @@ security:
         - { path: "%sylius.security.shop_regex%/account", role: ROLE_USER }
 
         - { path: "%sylius.security.new_api_admin_regex%/.*", role: ROLE_API_ACCESS }
+        - { path: "%bitbag.vue_storefront.security.regex%/user/login", role: IS_AUTHENTICATED_ANONYMOUSLY }
